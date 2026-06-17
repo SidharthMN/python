@@ -12,3 +12,4 @@ def division (a,b):
 
 if __name__ == "__main__":
     print("Calculator module executed directly")
+
