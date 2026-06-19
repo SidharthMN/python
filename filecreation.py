@@ -20,14 +20,14 @@ read_data.close()
 '''
 #Using Context Manager
 with open("newfile.txt","r") as f:
-print("Current Position : ",f.tell())
-f.read(6)
-print("After read position : ",f.tell())
-f.seek(4)
-print("After Seek : ",f.tell())
-print(f.read())
-'''
+   print("Current Position : ",f.tell())
+   f.read(6)
+   print("After read position : ",f.tell())
+   f.seek(4)
+   print("After Seek : ",f.tell())
+   print(f.read())
 
+'''
 '''
 with open ("car.jpg","rb") as data:
     image_read=data.read()
@@ -48,6 +48,7 @@ if os.path.exists(filepath):
 else:
     print(f"{filepath} doesn't exist")
 '''
+'''
 print("Serialisation and Deserialisation")
 import pickle 
 
@@ -57,6 +58,9 @@ data = {
     "subjects" : {"Malayalam","Maths","English"}
     }
 
+'''
+
+'''
 #Serilaisation - Saving data to file
 
 with open("user_details.pkl","wb") as f:
@@ -73,3 +77,4 @@ print("Data is serialised to bytes :",dump_data)
 load_data = pickle.loads(dump_data)
 print("Data is sserialised to objects : ",load_data)
 #tryout json module also
+'''
