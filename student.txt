@@ -1,0 +1,9 @@
+Student Records
+Name: Sidharth, Marks: 40, Attendance: 95%
+Name: Ronaldo, Marks: 35, Attendance: 92%
+Name: Virat, Marks: 39, Attendance: 92%
+Name: Walter, Marks: 0, Attendance: 50%
+Name: Thanos, Marks: 30, Attendance: 50%
+Name: John, Marks: 40, Attendance: 90%
+Name: Alex, Marks: 32, Attendance: 95%
+Name: Sam, Marks: 27, Attendance: 88%

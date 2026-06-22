@@ -100,3 +100,17 @@ while temp > 0:
 
 print("Product of digits : ",product_digits)
 '''
+
+pin = int(input("Enter the pin :"))
+welcome = "Welcome User"
+correct_pin = 2255
+balance =100000
+attempts = 0
+
+while attempts<3:
+   pin = int(input("Enter the pin :"))
+   if pin == correct_pin:
+      print(welcome)
+   else:
+      print("Try again later")
+   
