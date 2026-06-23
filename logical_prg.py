@@ -202,3 +202,35 @@ largest =15
 num =21
 21 > 10
 '''
+'''
+numbers=tuple(map(int,input("Enter the numbers to be inserted : ").split(",")))
+elements=int(input("Enter the element : "))
+count = 0
+for item in numbers:
+   if item == elements:
+      count+=1
+print("Tuple elements are :",numbers)
+print(f"Occurance of {elements} is : {count}")
+'''
+
+
+'''input = 1 2 3 4 5 6
+target = 6
+output = [1,5][2,4][3,3]
+'''
+numbers=tuple(map(int,input("Enter the numbers to be inserted : ").split(",")))
+target=int(input("Enter the target sum : "))
+
+for i in range(len(numbers)):
+    for j in range(i, len(numbers)):
+        if numbers[i] + numbers[j] == target:
+            print((numbers[i], numbers[j]))
+
+
+#reverse of a dictionary
+
+data = {
+    "a": 1,
+    "b": 2,
+    "c": 3,
+}
