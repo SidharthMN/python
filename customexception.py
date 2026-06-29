@@ -24,12 +24,13 @@ numbers = [12,24,15,17,16]
 def bubblesort (num):
     n=len(num)
     for i in range(n):
-        for j in range(i+1,n):
-            if num[i]<num[j]:
-                num[j],num[i]==num[i],num[j]
+        for j in range(0,n-i-1):
+            if num[j]>num[j+1]:
+                num[j],num[j+1]=num[j+1],num[j]
     return num
 
 print(bubblesort(numbers))                
+
 
 
            
