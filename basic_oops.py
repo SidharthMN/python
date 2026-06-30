@@ -83,6 +83,7 @@ electriccar.category("Car","Road")
 electriccar.vehicle_category("SUV","AWD","Black")   
 electriccar.car_type("Porsche","Macan","Electric",12162000.00)
 '''
+'''
 #Multiple Inheritance
 
 class ImageUpload:
@@ -104,3 +105,18 @@ instagram.user_analytics("pamman.memes","sid.xoid","like")
 
 #hybrid(multiple + multilevel)
 #hierarchy(3 child class access from parent 1 parent - 3 child)
+'''
+#polymorphism
+
+#method overloading & overiding
+print(len("chichichi"))
+print(len([10,20,30,40,50,60,70,80,90]))
+
+class Calculator:
+    def add(self,num1=0,num2=0,num3=0):
+      return num1+num2+num3
+    
+calculator = Calculator()
+print(calculator.add(9,8,0))
+print(calculator.add(-1,3,5))
+print(calculator.add(10,20,5))
