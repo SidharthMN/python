@@ -43,7 +43,7 @@ print(library2.name,library2.location,library2.total_books)
 
 '''
 '''
-#Inheritance
+#Single Inheritance
 
 class User: #parent class/base class/super class
     def login(self):
@@ -106,9 +106,12 @@ instagram.user_analytics("pamman.memes","sid.xoid","like")
 #hybrid(multiple + multilevel)
 #hierarchy(3 child class access from parent 1 parent - 3 child)
 '''
+'''
 #polymorphism
 
-#method overloading & overiding
+#method overloading 
+# same method ,same class, different parameters
+
 print(len("chichichi"))
 print(len([10,20,30,40,50,60,70,80,90]))
 
@@ -120,3 +123,108 @@ calculator = Calculator()
 print(calculator.add(9,8,0))
 print(calculator.add(-1,3,5))
 print(calculator.add(10,20,5))
+'''
+'''
+#Example 2 : 
+email = input("Enter the e-mail : ")
+password = input("Enter the password : ")
+phone_no = input("Enter the phone number : ")
+class Facebook:
+   def login(self,email=None,password=None,phone_no=None):
+      if email and password :
+         print(f"Login through Email ID : {email}")
+      elif phone_no and password:
+         print(f"Login through Mobile Number : {phone_no}")
+      else:
+         print("Invalid Login")
+
+facebook = Facebook()
+
+if email:
+   facebook.login(email=email,password=password)
+else:
+   facebook.login(phone_no=phone_no,password=password)
+'''
+'''
+class Payment:
+   def pay(self,amount,method="cash"):
+      if method == "cash":
+         print(f"{amount} is collected via cash")
+      elif method == "upi":
+         print(f"{amount} is collected via upi")
+      elif method =="card":
+         print(f"{amount} is collected via card")
+      else:
+         print(f"{amount} is not received")
+
+payment = Payment()
+payment.pay(540)
+payment.pay(720,method="upi")
+payment.pay(1200,method="card")
+'''
+'''
+#Method Overriding
+#different class, same method , same parameters
+
+class Employee:
+   def work(self):
+      print("Working as Employee")
+   def skill(self):
+      print("Python full stack intern")
+class Manager(Employee):
+   def work(self):
+      super().work()
+      print("Managing Team")
+
+
+
+manager=Manager()
+manager.work()
+manager.skill()
+
+'''
+'''
+class Order:
+    def order_details(self,product_name,quantity):
+        print(f"Order placed for {quantity} {product_name}.")
+
+class OnlineOrder(Order):
+    def order_details(self,product_name,quantity,address):
+        super().order_details(product_name,quantity)
+        print(f"Order delivered to {address}")
+
+online_order=OnlineOrder()
+online_order.order_details("Munch",5,"Bakery Junction")
+'''
+#abstraction : hiding implementation details from the user
+
+from abc import ABC , abstractmethod
+class Vehicle(ABC):
+    #decorators
+    @abstractmethod
+    def start_engine(self):
+        pass
+    @abstractmethod
+    def stop_engine(self):
+        pass
+    @abstractmethod
+    def headlights_on(self):
+        print("Headlights are on")
+
+class Car(Vehicle):
+    def start_engine(self):
+        print("Car started using key.")
+    def stop_engine(self):
+        print("Engine stopped using key")
+
+vehicle = Vehicle()
+vehicle.start_engine()
+vehicle.stop_engine()
+vehicle.headlights_on()
+
+'''
+car = Car()
+car.start_engine()
+car.stop_engine()
+car.headlights_on()
+'''
