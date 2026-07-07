@@ -56,7 +56,7 @@ functions = [add , subtract]
 print(f"Addition: ",functions[0](10,5))
 print(f"Substraction: ",functions[1](10,5))
 '''
-
+'''
 
 def email_notification():
     print("Sending email notification....")
@@ -85,5 +85,75 @@ result1= calculate(add,10,5)
 result2 = calculate(subtract,10,5)
 print("Addition : ",result1)
 print("Substraction : ",result2)
-
+'''
+'''
 #function defining another function
+#iterators
+
+iter_list = iter([10,20,30,40,50])
+print(next(iter_list))
+print(next(iter_list))
+print(next(iter_list))
+print(next(iter_list))
+print(next(iter_list))
+'''
+'''
+#generators
+
+def countdown(n):
+    while n > 0:
+        yield n
+        n-=1
+
+count = countdown(10)
+print(next(count))
+print(next(count))
+print(next(count))
+print(next(count))
+print(next(count))
+print(next(count))
+print(next(count))
+print(next(count))
+print(next(count))
+print(next(count))
+'''
+'''
+
+def squared_num():
+    for num in range(1,11):
+        yield num*num
+numbers=squared_num()
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+
+#work : inside a function create a file using context manager using iteration
+'''
+
+#decorators
+def decorator_pgm(func):
+    def wrapper(*args):
+        print("Calculating two numbers....")
+        result = func(*args)
+        print("Final Output Obtained ")
+        return result
+    return wrapper
+
+@decorator_pgm
+def add(num1,num2):
+    return num1+num2
+
+@decorator_pgm
+def sub(num1,num2):
+    return num1-num2
+
+print(add(22,22))
+print(sub(22,22))
+
