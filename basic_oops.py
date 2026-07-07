@@ -197,7 +197,7 @@ online_order=OnlineOrder()
 online_order.order_details("Munch",5,"Bakery Junction")
 '''
 #abstraction : hiding implementation details from the user
-
+'''
 from abc import ABC , abstractmethod
 class Vehicle(ABC):
     #decorators
@@ -221,6 +221,7 @@ vehicle = Vehicle()
 vehicle.start_engine()
 vehicle.stop_engine()
 vehicle.headlights_on()
+'''
 
 '''
 car = Car()
@@ -228,3 +229,214 @@ car.start_engine()
 car.stop_engine()
 car.headlights_on()
 '''
+'''
+#encapsulation
+class Person:
+    def __init__ (self,name,age):
+        self.name = name
+        self.__age = age  #private variable
+
+    def show_age(self):
+        print(self.__age)
+
+person = Person("Abhi",23)
+print(person.name)
+person.show_age()
+'''
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.__age = age #private variable
+
+    def get_age(self):
+        return self.__age
+    
+    def set_age(self,age):
+       if age > 0:
+           self.__age = age
+
+person = Person("Abhi",23)
+print(person.name)
+print(person.get_age())
+person.set_age(25)
+print(person.get_age())
+'''
+
+    
+#data hiding mechanism by using rivate variables
+class Library:
+    def __init__ (self,student_name):
+        self.student_name=student_name
+        self.__books_issued = 0
+        print(student_name)
+'''
+
+#method overloading:same class,same method,different arguments
+
+"""class Facebook:
+    def login(self,email=None,password=None,phone_number=None):
+        if email and password:
+            print(f"Login through Email ID: {email}")
+        elif phone_number and password:
+            print(f"Login through Mobile Number: {phone_number}")
+        else:
+            print("Invalid Login")
+
+facebook=Facebook()
+facebook.login(email="arunagsnair18@gmail.com",password="arunag39")
+facebook.login(phone_number=7492028738,password="arunag39")"""
+
+"""class Payment:
+    def pay(self,amount,method="cash"):#it is default
+        if method=="cash":
+            print(f"{amount} is collected via {method} method.")
+        elif method=="upi":
+            print(f"{amount} is collected via {method} method.")
+        elif method=="card":
+            print(f"{amount} is collected via {method} method.")
+
+payment=Payment()
+payment.pay(540)#ivde method specify chynda becz default ait cash enn koduthitund
+payment.pay(350,method="upi")
+payment.pay(670,method="card")"""
+
+#over riding...diferent classs,same method,same parameters
+
+"""class Employee:
+    def work(self):
+        print("Working as Employee")
+    def skill(self):
+        print("Python full stack Intern")
+
+class Manager(Employee):
+    def work(self):s
+        super().work()#superkeyword
+        print("Managing Team")
+
+manager=Manager()
+manager.work()
+manager.skill()"""
+'''
+class Order:
+    def order_details(self,product_name,quantity):
+        print(f"Order placed for {quantity} Qty {product_name}.")
+
+class OnlineOrder(Order):
+    def order_details(self,product_name,quantity,address):
+        super().order_details(product_name,quantity)
+        print(f"Order Delivered to {address}")
+
+online_order=OnlineOrder()
+online_order.order_details("Cinthol",4,"Bakery Junction")'''
+
+#Abstarction..hiding the implementation details from the user
+#class abc it is from abc module
+
+
+"""from abc import ABC,abstractmethod
+class Vehicle(ABC): #ABC is a class here 
+    @abstractmethod
+    def start_engine(self):
+        pass
+    @abstractmethod
+    def stop_engine(self):
+        pass#here pass for future purposes
+    def headlights_on(self):
+        print("Headlights are set to low")
+
+class Car(vehicle):
+    def start_engine(self):
+        print("Car started using key.")
+    def stop_engine(self):
+        print("Engine stopped using key")"""
+'''
+vehicle=Vehicle()
+vehicle.stop_engine()
+vehicle.start_engine() 
+vehicle.headlights_on()
+'''
+"""car=Car()
+car.start_engine()
+car.stop_engine()
+car.headlights_on()"""
+
+#encapsulation....hiding the data 
+#data hiding mechanism by using private variables
+
+"""class Person:
+    def _init_(self,name,age):
+        self.name=name
+        self.__age=age#private varible
+
+    def show_age(self):
+        print(self.__age)    
+
+person=Person("Aruna",21)
+print(person.name)
+print.show_age()"""   
+
+"""class Person:
+    def _init_(self,name,age):
+        self.name=name#publically accesible 
+        self.__age=age#private variable
+
+    def get_age(self):
+        return self.__age
+    
+    def set_age(self,age):
+        if age>0:
+            self.__age=age
+        else:
+            print("Age must be Positive !!!") 
+person=Person("Aruna",21)
+print(person.name)   
+print(person.get_age())
+person.set_age(23)
+print(person.get_age())"""
+
+
+"""class Library:
+    def _init_ (self,student_name):
+        self.student_name=student_name
+        self.__books_issued=0#private variable
+        print(student_name)
+    def set_books(self,count):
+        if count>=0:
+            self.__books_issued=count
+        else:
+            print("Invalid Book Count")
+
+    def issue_book(self):
+        self.__books_issued+=1
+        print("Book Issued Successfully")
+
+    def return_book(self):
+        if self.__books_issued>0:
+            self.__books_issued-=1
+             print("Book Returned Successfully")
+        else:
+            print("No Books To Returned !!!!")  
+
+    def get_books(self):
+        return self.__books_issued     
+
+library=Library("Aruna")
+library.issue_book()
+library.issue_book()       
+library.issue_book()
+library.return_book()
+print(f"Total Books : {library.get_books()}")"""
+
+class BankAccount:
+    def _init_(self,account_holder,balance,pin):
+        self.account_holder=account_holder #public variable
+        self._balance=balance #protected variable
+        self.__pin=pin#private variable
+
+    #public method
+    def deposit(self,amount):
+        print("Public Method for Depositing")
+
+
+
+
