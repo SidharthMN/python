@@ -139,3 +139,17 @@ print(first_letter)
 word_length = {ch:len(ch) for ch in languages}
 print(word_length)
 '''
+#multiplication table
+#list of multiples of 5
+#set of multiples of 3
+#dictionary presenting multiplication table of 7
+
+number = range(1,11)
+multiple_of_5 = [multiple*5 for multiple in number ]
+multiple_of_3 = [multiple*3 for multiple in number]
+
+multiple_of_7 = {multiple:multiple*7 for multiple in number}
+
+print(multiple_of_3)
+print(multiple_of_5)
+print(multiple_of_7)
