@@ -157,3 +157,4 @@ def sub(num1,num2):
 print(add(22,22))
 print(sub(22,22))
 
+#find missing number from a set 1 to 7 without 2 insde the set

@@ -1,0 +1,166 @@
+backend-server
+logical part-python 
+data store-database-
+
+
+Data-raw facts, figures students marks(89,56,77,90,45)
+Information-meaningful data  total score-
+
+
+database-DBMS
+database management system(files)
+-Relational database management system -RDBMS(table)
+
+
+SQL-structured query language
+MySQL-db
+
+
+-Relational database management system -RDBMS(table)
+-formation of tables
+-tables were connected
+-multiples users can use
+-data fetching faster
+-modify
+-normalisation process
+
+
+table-rows and columns
+record-rows
+columns-field
+
+
+datatypes
+-String---char,varchar()
+-Numeric-int,float,double,decimal(10,2) 12345678.56
+-date and time  year-month-date  2000-12-23   23-12-2000   0000-00-00
+phone-bigint or varchar 
+
+
+operators
+arithmetic-->+,-,*,/
+logical --->and or not in between like
+comparison -->gt,lt,gte,lse
+
+and-both conditions true age>18 and weight>45
+empty set
+
+or -any of the condition true
+
+not- opposite of that condition
+
+in -in specific condition age in(23,34,56)
+
+between-(inclusive) range of values--> age between 23 and 45
+
+like- specific patterns
+2 wildcards
+% -multiple data
+_ -single formation
+
+
+like 'a%'
+'%a'
+'%ow%'
+
+Anupama
+arya
+aruna
+'a_____%'
+
+'_ _e%'  -> blessin
+
+__n%
+
+
+SQL COMMANDS/subtypes
+
+DDL-Data Definition Language
+DML-Data Manipulation Language
+DCL -Data Control Language
+TCL -Transaction Control Language
+DQL -Data Query Language
+
+DDL-structure formation or table creation
+1.Create
+2.Drop
+3.Alter
+4.Truncate
+5.Rename
+
+DML-Data Manipulation Language (modifications)
+1.Update
+2.Insert
+3.Delete
+
+TCL -Transaction Control Language(transactions)
+rollback
+savepoint
+commit
+
+DCL- Data Control Language
+1.grant 
+2.revoke
+
+DQL -Data Query Language
+1.select
+
+
+Aggregate functions
+count()
+min()
+max()
+avg()
+sum()
+
+group by,having(works on a condition)
+
+order by - asc /desc
+
+
+trim - removing the white spaces
+length
+
+case  - specific casing
+grading system
+90 above A+
+
+sql constraints
+
+1. primary key (not null+unique)
+2. foreign key 
+3. unique key
+4. not null
+5. check
+6. default 
+7. indexing
+8. autoincrement
+
+joins - connect 2 tables
+left join
+right join
+inner join
+outer join
+
+
+limit,offset
+
+integrity
+domain 
+entity  - 1row 
+1 renjana 20 EMC
+1 renjana 20 EMC
+referential
+user defined
+
+1 db - multiple tables creation is possible
+
+
+1.Create Database
+query: create database databasename;
+example: create database librarydetails;
+
+
+2.Use db
+query: use databasename;
+example: use librarydetails;
