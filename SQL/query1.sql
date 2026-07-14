@@ -1,0 +1,24 @@
+#create database sample;
+use sample;
+#create table student(sname varchar(30), batch varchar(10), course varchar(20), age int);
+desc student;
+#show tables;
+show databases;
+#ALTER TABLE student add place varchar(15);
+#desc student;
+#ALTER TABLE student DROP course;
+#desc student;
+#ALTER TABLE student RENAME COLUMN age TO dob;
+#ALTER TABLE student MODIFY COLUMN dob DATE;
+desc student;
+#insert into student values("Rahul","CS",'2005-04-18',"TVM");
+
+#insert into student (fname,batch) values ('Nikki' , 'CS');
+#select* from student;
+#insert into student values('Riya','BBT','2003-09-08','Kollam'),('Shanu','BCA','2001-07-06','Thrissur'),('Nila','B.Tech','2000-09-08','Kochi');
+select* from student;
+#SET SQL_SAFE_UPDATES = 0;
+#delete from student where fname = 'Nikki';
+select* from student;
+#update student set batch='BBA' where fname ='Riya';
+select* from student;
