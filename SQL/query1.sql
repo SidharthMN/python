@@ -21,4 +21,4 @@ select* from student;
 #delete from student where fname = 'Nikki';
 select* from student;
 #update student set batch='BBA' where fname ='Riya';
-select* from student;
+select* from student
